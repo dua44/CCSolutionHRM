@@ -1,0 +1,168 @@
+﻿@model CCSolutionHRM.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Company :
+        </dt>
+        <dd>
+            @Html.DropDownListFor(model => model.CompanyId, new SelectList(ViewBag.CompaniesList, "Value", "Text", 1), "Select Company")
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GenderId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GenderId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NationalityId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NationalityId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DialingCode1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DialingCode1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DialingCode2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DialingCode2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermenantAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermenantAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Delete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdationIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdationIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdationBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdationBy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

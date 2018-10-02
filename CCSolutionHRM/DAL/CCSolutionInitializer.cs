@@ -11,6 +11,7 @@ namespace CCSolutionHRM.DAL
     {
         protected override void Seed(CCSolutionContext context)
         {
+            /*
             var company = new List<Company>
             {
             new Company{Address="",CreationBy=1,CreationDate=DateTime.Now,CreationIP="",DialingCode=971,EmailAddress="",Name="CCSolution",PhoneNumber=""
@@ -269,49 +270,65 @@ namespace CCSolutionHRM.DAL
             nationality.ForEach(s => context.Nationalitys.Add(s));
             context.SaveChanges();
 
-            //var employees = new List<Employee>
-            //{
-            //new Student{FirstMidName="Carson",LastName="Alexander",EnrollmentDate=DateTime.Parse("2005-09-01")},
-            //new Student{FirstMidName="Meredith",LastName="Alonso",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            //new Student{FirstMidName="Arturo",LastName="Anand",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            //new Student{FirstMidName="Gytis",LastName="Barzdukas",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            //new Student{FirstMidName="Yan",LastName="Li",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            //new Student{FirstMidName="Peggy",LastName="Justice",EnrollmentDate=DateTime.Parse("2001-09-01")},
-            //new Student{FirstMidName="Laura",LastName="Norman",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            //new Student{FirstMidName="Nino",LastName="Olivetto",EnrollmentDate=DateTime.Parse("2005-09-01")}
-            //};
+            var document = new List<Document>
+            {
+            new Document{CreationBy=1, CreationDate = DateTime.Now, CreationIP="",Delete=false,Name="NIC",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP=""},
+            new Document{CreationBy=1, CreationDate = DateTime.Now, CreationIP="",Delete=false,Name="PassPort",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP=""},
+            new Document{CreationBy=1, CreationDate = DateTime.Now, CreationIP="",Delete=false,Name="Visa",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP=""},
+            new Document{CreationBy=1, CreationDate = DateTime.Now, CreationIP="",Delete=false,Name="Education",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP=""}
+            };
 
-            //students.ForEach(s => context.Students.Add(s));
-            //context.SaveChanges();
-            //var courses = new List<Course>
-            //{
-            //new Course{CourseID=1050,Title="Chemistry",Credits=3,},
-            //new Course{CourseID=4022,Title="Microeconomics",Credits=3,},
-            //new Course{CourseID=4041,Title="Macroeconomics",Credits=3,},
-            //new Course{CourseID=1045,Title="Calculus",Credits=4,},
-            //new Course{CourseID=3141,Title="Trigonometry",Credits=4,},
-            //new Course{CourseID=2021,Title="Composition",Credits=3,},
-            //new Course{CourseID=2042,Title="Literature",Credits=4,}
-            //};
-            //courses.ForEach(s => context.Courses.Add(s));
-            //context.SaveChanges();
-            //var enrollments = new List<Enrollment>
-            //{
-            //new Enrollment{StudentID=1,CourseID=1050,Grade=Grade.A},
-            //new Enrollment{StudentID=1,CourseID=4022,Grade=Grade.C},
-            //new Enrollment{StudentID=1,CourseID=4041,Grade=Grade.B},
-            //new Enrollment{StudentID=2,CourseID=1045,Grade=Grade.B},
-            //new Enrollment{StudentID=2,CourseID=3141,Grade=Grade.F},
-            //new Enrollment{StudentID=2,CourseID=2021,Grade=Grade.F},
-            //new Enrollment{StudentID=3,CourseID=1050},
-            //new Enrollment{StudentID=4,CourseID=1050,},
-            //new Enrollment{StudentID=4,CourseID=4022,Grade=Grade.F},
-            //new Enrollment{StudentID=5,CourseID=4041,Grade=Grade.C},
-            //new Enrollment{StudentID=6,CourseID=1045},
-            //new Enrollment{StudentID=7,CourseID=3141,Grade=Grade.A},
-            //};
-            //enrollments.ForEach(s => context.Enrollments.Add(s));
-            //context.SaveChanges();
+            document.ForEach(s => context.Documents.Add(s));
+            context.SaveChanges();
+
+            var employee = new List<Employee>
+            {
+            new Employee{EmailAddress="dua2004@gmail.com",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",CurrentAddress="",DateOfBirth=DateTime.Now.AddYears(-36),Delete=false,DialingCode1=92,DialingCode2=92,GenderId=1,
+            Name="Muhammad Rizwan",NationalityId=1,PermenantAddress="",PhoneNumber1="3222999643",PhoneNumber2="3222999643",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP=""},
+            new Employee{EmailAddress="sabir@gmail.com",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",CurrentAddress="",DateOfBirth=DateTime.Now.AddYears(-36),Delete=false,DialingCode1=92,DialingCode2=92,GenderId=1,
+            Name="Muhammad Sabir",NationalityId=1,PermenantAddress="",PhoneNumber1="3222999665",PhoneNumber2="3222999665",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP=""}
+            };
+
+            employee.ForEach(s => context.Employees.Add(s));
+            context.SaveChanges();
+
+            var employeedocument = new List<EmployeeDocument>
+            {
+            new EmployeeDocument{Comments="NIC #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=1,DocumentNumber="42101-1612323-9",EmployeeId=1
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="Passport #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=2,DocumentNumber="CH9893221",EmployeeId=1
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="Visa #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=3,DocumentNumber="CH98254821",EmployeeId=1
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="SSC #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="HSC #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="Bachlors Degree #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="Masters Degree #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+
+            new EmployeeDocument{Comments="NIC #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=1,DocumentNumber="42101-1611234-9",EmployeeId=2
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="Passport #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=2,DocumentNumber="CH9892221",EmployeeId=2
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="Visa #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=3,DocumentNumber="CH92363221",EmployeeId=2
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="SSC #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="HSC #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="Bachlors Degree #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+            new EmployeeDocument{Comments="Masters Degree #",UpdationIP="",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
+            ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""}
+            };
+
+            employeedocument.ForEach(s => context.EmployeeDocuments.Add(s));
+            context.SaveChanges();
+
+            */
         }
     }
 }

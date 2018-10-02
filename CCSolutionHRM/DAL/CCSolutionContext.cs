@@ -10,7 +10,7 @@ namespace CCSolutionHRM.DAL
 {
     public class CCSolutionContext : DbContext
     {
-        public CCSolutionContext() : base("CCSolutionContext")
+        public CCSolutionContext() : base("CCSolutionModel")
         {
         }
 
@@ -25,5 +25,7 @@ namespace CCSolutionHRM.DAL
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
+
+       
     }
 }
