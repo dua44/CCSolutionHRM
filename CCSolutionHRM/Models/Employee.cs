@@ -24,6 +24,7 @@ namespace CCSolutionHRM.Models
         public string PermenantAddress { get; set; }
         public virtual ICollection<Document> Documents { get; set; }
         public bool Delete { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd MMM, yyyy hh:mm:ss}")]
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }
         public int CreationBy { get; set; }

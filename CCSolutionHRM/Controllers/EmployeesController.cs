@@ -46,7 +46,7 @@ namespace CCSolutionHRM.Controllers
             inner join dbo.Gender g (nolock) on g.id = e.genderid
             inner join dbo.Nationality n (nolock) on n.id = e.nationalityid
             inner join dbo.Company c (nolock) on c.Id = e.CompanyId
-            order by e.CreationDate             ";
+            order by e.CreationDate";
             List<CustomEmployee> objCE = db.Database.SqlQuery<CustomEmployee>(Query).ToList();
             return View(objCE);
         }
@@ -60,17 +60,58 @@ namespace CCSolutionHRM.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Employee employee = db.Employees.Find(id);
-            List<Company> objcompany = db.Companys.ToList();
-            var items = new List<SelectListItem>();
-            foreach (var company in objcompany)
-            {
-                items.Add(new SelectListItem() { Text = company.Name, Value = company.ID.ToString(), Selected = company.ID == employee.CompanyId ? true : false });
-            }
             if (employee == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CompaniesList = items;
+
+            List<Company> objcompany = db.Companys.ToList();
+            if (objcompany != null)
+            {
+                var items = new List<SelectListItem>();
+                foreach (var company in objcompany)
+                {
+                    items.Add(new SelectListItem() { Text = company.Name, Value = company.ID.ToString(), Selected = company.ID == employee.CompanyId ? true : false });
+                }
+
+                ViewBag.CompaniesList = items;
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
+
+            List<Gender> objGender = db.Genders.ToList();
+            if (objGender != null)
+            {
+                var genders = new List<SelectListItem>();
+                foreach (var gender in objGender)
+                {
+                    genders.Add(new SelectListItem() { Text = gender.Name, Value = gender.ID.ToString(), Selected = gender.ID == employee.GenderId ? true : false });
+                }
+                ViewBag.GenderList = genders;
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
+            List<Nationality> objNationality = db.Nationalitys.ToList();
+            if (objGender != null)
+            {
+                var nationals = new List<SelectListItem>();
+                foreach (var nationality in objNationality)
+                {
+                    nationals.Add(new SelectListItem() { Text = nationality.Name, Value = nationality.ID.ToString(), Selected = nationality.ID == employee.NationalityId ? true : false });
+                }
+                ViewBag.NationalityList = nationals;
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
             return View(employee);
         }
 
@@ -109,6 +150,74 @@ namespace CCSolutionHRM.Controllers
             {
                 return HttpNotFound();
             }
+
+            List<Company> objcompany = db.Companys.ToList();
+            if (objcompany != null)
+            {
+                var items = new List<SelectListItem>();
+                foreach (var company in objcompany)
+                {
+                    items.Add(new SelectListItem() { Text = company.Name, Value = company.ID.ToString(), Selected = company.ID == employee.CompanyId ? true : false });
+                }
+
+                ViewBag.CompaniesList = items;
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
+
+            List<Gender> objGender = db.Genders.ToList();
+            if (objGender != null)
+            {
+                var genders = new List<SelectListItem>();
+                foreach (var gender in objGender)
+                {
+                    genders.Add(new SelectListItem() { Text = gender.Name, Value = gender.ID.ToString(), Selected = gender.ID == employee.GenderId ? true : false });
+                }
+                ViewBag.GenderList = genders;
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
+            List<Nationality> objNationality = db.Nationalitys.ToList();
+            if (objGender != null)
+            {
+                var nationals = new List<SelectListItem>();
+                var phonenumber = new List<SelectListItem>();
+                var altphonenumber = new List<SelectListItem>();
+                foreach (var nationality in objNationality)
+                {
+                    nationals.Add(new SelectListItem() { Text = nationality.Name, Value = nationality.ID.ToString(), Selected = nationality.ID == employee.NationalityId ? true : false });
+                    phonenumber.Add(new SelectListItem()
+                    {
+                        Text = nationality.Name + " [+" + nationality.DialingCode.ToString() + "]",
+                        Value = nationality.DialingCode.ToString()
+                        ,
+                        Selected = nationality.DialingCode == employee.DialingCode1 ? true : false
+                    });
+                    altphonenumber.Add(new SelectListItem()
+                    {
+                        Text = nationality.Name + " [+" + nationality.DialingCode.ToString() + "]",
+                        Value = nationality.DialingCode.ToString()
+                        ,
+                        Selected = nationality.DialingCode == employee.DialingCode2 ? true : false
+                    });
+                }
+                ViewBag.NationalityList = nationals;
+                ViewBag.PhoneNumber = phonenumber;
+                ViewBag.AlternatePhoneNumber = altphonenumber;
+
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
+
             return View(employee);
         }
 

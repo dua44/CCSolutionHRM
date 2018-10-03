@@ -1,21 +1,23 @@
 ﻿@model CCSolutionHRM.Models.Employee
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Employee Detail";
 }
 
-<h2>Details</h2>
+<h2>Employee Details</h2>
 
 <div>
-    <h4>Employee</h4>
+    <h4></h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
             Company :
         </dt>
         <dd>
-            @Html.DropDownListFor(model => model.CompanyId, new SelectList(ViewBag.CompaniesList, "Value", "Text", 1), "Select Company")
+            @Html.DropDownListFor(model => model.CompanyId, new SelectList(ViewBag.CompaniesList, "Value", "Text"), "Select Company")
         </dd>
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -23,137 +25,133 @@
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.EmailAddress)
+            Email :
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.EmailAddress)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
+            Birth Date :
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.DateOfBirth)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.GenderId)
+            Gender :
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.GenderId)
+            @Html.DropDownListFor(model => model.GenderId, new SelectList(ViewBag.GenderList, "Value", "Text"), "Select Gender")
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.NationalityId)
+            Nationality :
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.NationalityId)
+            @Html.DropDownListFor(model => model.NationalityId, new SelectList(ViewBag.NationalityList, "Value", "Text"), "Select National")
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.DialingCode1)
+            Phone Number :
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DialingCode1)
+            @Html.DisplayFor(model => model.DialingCode1) - @Html.DisplayFor(model => model.PhoneNumber1)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber1)
+            Alt Phone Number :
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PhoneNumber1)
+            @Html.DisplayFor(model => model.DialingCode2) - @Html.DisplayFor(model => model.PhoneNumber2)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.DialingCode2)
+            Current Address :
         </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DialingCode2)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber2)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber2)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentAddress)
-        </dt>
-
         <dd>
             @Html.DisplayFor(model => model.CurrentAddress)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.PermenantAddress)
+            Permenant Address :
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.PermenantAddress)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Delete)
+            Status :
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Delete)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.CreationDate)
+            Signup Date :
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.CreationDate)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.CreationIP)
+            Creation IP:
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.CreationIP)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.CreationBy)
+            Created By :
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.CreationBy)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.UpdationDate)
+            Updation Date :
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.UpdationDate)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.UpdationIP)
+            Updation IP :
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.UpdationIP)
         </dd>
-
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
         <dt>
-            @Html.DisplayNameFor(model => model.UpdationBy)
+            Updated By : 
         </dt>
 
         <dd>

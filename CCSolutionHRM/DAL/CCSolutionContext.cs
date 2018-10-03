@@ -20,6 +20,7 @@ namespace CCSolutionHRM.DAL
         public DbSet<Gender> Genders { get; set; }
         public DbSet<Nationality> Nationalitys { get; set; }
         public DbSet<Company> Companys { get; set; }
+        public DbSet<Users> Userss { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -328,7 +328,13 @@ namespace CCSolutionHRM.DAL
             employeedocument.ForEach(s => context.EmployeeDocuments.Add(s));
             context.SaveChanges();
 
-            */
+            var user = new List<Users>
+            {
+                new Users{CreationBy=1,CreationDate=DateTime.Now,CreationIP="",Delete=false,LoginId="rizwanahmad",Name="Muhammad Rizwan",Password="Axact123",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP=""}
+            };
+            user.ForEach(s => context.Userss.Add(s));
+            context.SaveChanges();
+             */
         }
     }
 }
