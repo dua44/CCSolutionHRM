@@ -150,6 +150,19 @@ namespace CCSolutionHRM.Controllers
             {
                 return HttpNotFound();
             }
+            
+            Users createdBy = db.Userss.Find(employee.CreationBy);
+            Users updatedBy = db.Userss.Find(employee.UpdationBy);
+
+            if (createdBy != null)
+            {
+                ViewBag.CreatedBy = createdBy;
+            }
+
+            if (updatedBy != null)
+            {
+                ViewBag.UpdatedBy = updatedBy;
+            }
 
             List<Company> objcompany = db.Companys.ToList();
             if (objcompany != null)
