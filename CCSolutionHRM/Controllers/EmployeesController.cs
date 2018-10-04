@@ -15,6 +15,7 @@ namespace CCSolutionHRM.Controllers
     {
         private CCSolutionContext db = new CCSolutionContext();
 
+
         // GET: Employees
         public ActionResult Index()
         {
@@ -26,7 +27,7 @@ namespace CCSolutionHRM.Controllers
         {
             string Query = @"select e.Id,
             e.CompanyId,
-            e.[Name] as EmployeeName,
+            e.[Name],
             e.EmailAddress,
             e.DateOfBirth,
             e.GenderId,
@@ -37,7 +38,7 @@ namespace CCSolutionHRM.Controllers
             e.PhoneNumber2,
             e.CurrentAddress,
             e.PermenantAddress,
-            e.[Delete],
+            case when e.[Delete] = 0 then 'Active' else 'In active' end as [Delete],
             e.CreationDate,
             g.[Name] as Gender,
             n.[Name] as Nationality,
@@ -118,6 +119,67 @@ namespace CCSolutionHRM.Controllers
         // GET: Employees/Create
         public ActionResult Create()
         {
+            List<Company> objcompany = db.Companys.ToList();
+            if (objcompany != null)
+            {
+                var items = new List<SelectListItem>();
+                foreach (var company in objcompany)
+                {
+                    items.Add(new SelectListItem() { Text = company.Name, Value = company.ID.ToString() });
+                }
+
+                ViewBag.CompaniesList = items;
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
+
+            List<Gender> objGender = db.Genders.ToList();
+            if (objGender != null)
+            {
+                var genders = new List<SelectListItem>();
+                foreach (var gender in objGender)
+                {
+                    genders.Add(new SelectListItem() { Text = gender.Name, Value = gender.ID.ToString() });
+                }
+                ViewBag.GenderList = genders;
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
+            List<Nationality> objNationality = db.Nationalitys.ToList();
+            if (objGender != null)
+            {
+                var nationals = new List<SelectListItem>();
+                var phonenumber = new List<SelectListItem>();
+                var altphonenumber = new List<SelectListItem>();
+                foreach (var nationality in objNationality)
+                {
+                    nationals.Add(new SelectListItem() { Text = nationality.Name, Value = nationality.ID.ToString() });
+                    phonenumber.Add(new SelectListItem()
+                    {
+                        Text = nationality.Name + " [+" + nationality.DialingCode.ToString() + "]",
+                        Value = nationality.DialingCode.ToString()
+                    });
+                    altphonenumber.Add(new SelectListItem()
+                    {
+                        Text = nationality.Name + " [+" + nationality.DialingCode.ToString() + "]",
+                        Value = nationality.DialingCode.ToString()
+                    });
+                }
+                ViewBag.NationalityList = nationals;
+                ViewBag.PhoneNumber = phonenumber;
+                ViewBag.AlternatePhoneNumber = altphonenumber;
+
+            }
+            else
+            {
+                return HttpNotFound();
+            }
             return View();
         }
 
@@ -130,6 +192,17 @@ namespace CCSolutionHRM.Controllers
         {
             if (ModelState.IsValid)
             {
+                employee.UpdationBy = 1;
+                employee.UpdationIP = CCSolutionHRM.App_Code.Utilities.GetUserIP();
+                employee.UpdationDate = DateTime.Now;
+
+                employee.CreationBy = 1;
+                employee.CreationIP = CCSolutionHRM.App_Code.Utilities.GetUserIP();
+                employee.CreationDate = DateTime.Now;
+
+                employee.Delete = false;
+                
+
                 db.Employees.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -150,7 +223,7 @@ namespace CCSolutionHRM.Controllers
             {
                 return HttpNotFound();
             }
-            
+
             Users createdBy = db.Userss.Find(employee.CreationBy);
             Users updatedBy = db.Userss.Find(employee.UpdationBy);
 
@@ -239,10 +312,14 @@ namespace CCSolutionHRM.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,CompanyId,Name,EmailAddress,DateOfBirth,GenderId,NationalityId,DialingCode1,PhoneNumber1,DialingCode2,PhoneNumber2,CurrentAddress,PermenantAddress,Delete,CreationDate,CreationIP,CreationBy,UpdationDate,UpdationIP,UpdationBy")] Employee employee)
+        public ActionResult Edit([Bind(Include = @"ID,CompanyId,Name,EmailAddress,DateOfBirth,GenderId,NationalityId,DialingCode1,PhoneNumber1,DialingCode2,PhoneNumber2,CurrentAddress,PermenantAddress,Delete
+                ,CreationDate,CreationIP,CreationBy,UpdationDate,UpdationIP,UpdationBy")] Employee employee)
         {
             if (ModelState.IsValid)
             {
+                employee.UpdationDate = DateTime.Now;
+                employee.UpdationIP = CCSolutionHRM.App_Code.Utilities.GetUserIP();
+                employee.UpdationBy = 1;
                 db.Entry(employee).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

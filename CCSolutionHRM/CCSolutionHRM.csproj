@@ -155,10 +155,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Utilities.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
+    <Compile Include="Controllers\EmployeeDocumentsController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\CCSolutionContext.cs" />
@@ -243,6 +245,11 @@
     <Content Include="Views\Companies\Details.cshtml" />
     <Content Include="Views\Companies\Edit.cshtml" />
     <Content Include="Views\Companies\Index.cshtml" />
+    <Content Include="Views\EmployeeDocuments\Create.cshtml" />
+    <Content Include="Views\EmployeeDocuments\Delete.cshtml" />
+    <Content Include="Views\EmployeeDocuments\Details.cshtml" />
+    <Content Include="Views\EmployeeDocuments\Edit.cshtml" />
+    <Content Include="Views\EmployeeDocuments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

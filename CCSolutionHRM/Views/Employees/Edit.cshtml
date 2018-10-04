@@ -129,42 +129,44 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CreationIP, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Created IP :", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CreationIP, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CreationIP, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CreationIP, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CreationBy, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Created By :", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CreationBy, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CreationBy, "", new { @class = "text-danger" })
+                @if (ViewBag.createdby != null)
+                {
+                    @Html.TextBox("Created By", (string)ViewBag.createdby.Name, htmlAttributes: new { @class = "form-control", @readonly = true })
+                }
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.UpdationDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Updation Date :", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.UpdationDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UpdationDate, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.UpdationDate, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.UpdationIP, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Updated IP :", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.UpdationIP, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UpdationIP, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.UpdationIP, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.UpdationBy, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Updated By :", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.UpdationBy, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UpdationBy, "", new { @class = "text-danger" })
+                @if (ViewBag.updatedby != null)
+                {
+                    @Html.TextBox("Updated By", (string)ViewBag.updatedby.Name, htmlAttributes: new { @class = "form-control", @readonly = true })
+                }
             </div>
         </div>
 
@@ -182,7 +184,4 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-
-
-
 }

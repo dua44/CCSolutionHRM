@@ -10,7 +10,9 @@ namespace CCSolutionHRM.Models
     {
         public int ID { get; set; }
         public int CompanyId { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string EmailAddress { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd MMM, yyyy}")]
         public DateTime DateOfBirth { get; set; }

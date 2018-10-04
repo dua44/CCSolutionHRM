@@ -22,7 +22,7 @@ namespace CCSolutionHRM.Models
         public string PhoneNumber2 { get; set; }
         public string CurrentAddress { get; set; }
         public string PermenantAddress { get; set; }        
-        public bool Delete { get; set; }
+        public string Delete { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd MMM, yyyy hh:mm:ss}")]
         public DateTime CreationDate { get; set; }
         public string Gender { get; set; }
