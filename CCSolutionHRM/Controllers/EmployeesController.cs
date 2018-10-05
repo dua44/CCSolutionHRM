@@ -99,7 +99,7 @@ namespace CCSolutionHRM.Controllers
             }
 
             List<Nationality> objNationality = db.Nationalitys.ToList();
-            if (objGender != null)
+            if (objNationality != null)
             {
                 var nationals = new List<SelectListItem>();
                 foreach (var nationality in objNationality)
@@ -152,7 +152,7 @@ namespace CCSolutionHRM.Controllers
             }
 
             List<Nationality> objNationality = db.Nationalitys.ToList();
-            if (objGender != null)
+            if (objNationality != null)
             {
                 var nationals = new List<SelectListItem>();
                 var phonenumber = new List<SelectListItem>();
@@ -270,7 +270,7 @@ namespace CCSolutionHRM.Controllers
             }
 
             List<Nationality> objNationality = db.Nationalitys.ToList();
-            if (objGender != null)
+            if (objNationality != null)
             {
                 var nationals = new List<SelectListItem>();
                 var phonenumber = new List<SelectListItem>();
