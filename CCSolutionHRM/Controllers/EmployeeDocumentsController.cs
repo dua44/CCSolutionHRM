@@ -24,6 +24,7 @@ namespace CCSolutionHRM.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var employeeDocuments = db.EmployeeDocuments.Include(e => e.Document).Include(e => e.Employee).Where(x => x.EmployeeId == id);
+            ViewBag.EmployeeId = id;
             return View(employeeDocuments.ToList());
         }
 
@@ -43,24 +44,28 @@ namespace CCSolutionHRM.Controllers
         }
 
         // GET: EmployeeDocuments/Create
-        public ActionResult Create()
+        public ActionResult Create(int? id)
         {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             List<Nationality> objNationality = db.Nationalitys.ToList();
             if (objNationality != null)
-            {                
-                var phonenumber = new List<SelectListItem>();                
+            {
+                var phonenumber = new List<SelectListItem>();
                 foreach (var nationality in objNationality)
-                {                    
+                {
                     phonenumber.Add(new SelectListItem()
                     {
                         Text = nationality.Name + " [+" + nationality.DialingCode.ToString() + "]",
                         Value = nationality.DialingCode.ToString()
                     });
-                     
+
                 }
-                
+
                 ViewBag.PhoneNumber = phonenumber;
-                
+
 
             }
             else
@@ -68,7 +73,7 @@ namespace CCSolutionHRM.Controllers
                 return HttpNotFound();
             }
             ViewBag.DocumentId = new SelectList(db.Documents, "ID", "Name");
-            ViewBag.EmployeeId = new SelectList(db.Employees, "ID", "Name");
+            ViewBag.EmployeeId = new SelectList(db.Employees, "ID", "Name", id);
             return View();
         }
 
@@ -77,42 +82,32 @@ namespace CCSolutionHRM.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,EmployeeId,DocumentId,PhysicalLocation,DocumentNumber,NationalityId,IssueDate,ExpiryDate,Comments,Delete,CreationDate,CreationIP,CreationBy,UpdationDate,UpdationIP,UpdationBy")] EmployeeDocument employeeDocument)
+        public ActionResult Create([Bind(
+            Include = @"ID,EmployeeId,DocumentId,PhysicalLocation,DocumentNumber,NationalityId,IssueDate,ExpiryDate,Comments,Delete,CreationDate,CreationIP,CreationBy,UpdationDate,UpdationIP,UpdationBy")] EmployeeDocument employeeDocument
+            , HttpPostedFileBase file)
         {
-            try
+
+            if (ModelState.IsValid)
             {
+                employeeDocument.CreationBy = 1;
+                employeeDocument.CreationDate = DateTime.Now;
+                employeeDocument.CreationIP = CCSolutionHRM.App_Code.Utilities.GetUserIP();
 
-                
+                employeeDocument.UpdationBy = 1;
+                employeeDocument.UpdationDate = DateTime.Now;
+                employeeDocument.UpdationIP = CCSolutionHRM.App_Code.Utilities.GetUserIP();
 
-                if (ModelState.IsValid)
-                {
-                    employeeDocument.CreationBy = 1;
-                    employeeDocument.CreationDate = DateTime.Now;
-                    employeeDocument.CreationIP = CCSolutionHRM.App_Code.Utilities.GetUserIP();
+                employeeDocument.Delete = false;
 
-                    employeeDocument.UpdationBy = 1;
-                    employeeDocument.UpdationDate = DateTime.Now;
-                    employeeDocument.UpdationIP = CCSolutionHRM.App_Code.Utilities.GetUserIP();
 
-                    employeeDocument.Delete = false;
-                    
-
-                    db.EmployeeDocuments.Add(employeeDocument);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-
-                ViewBag.DocumentId = new SelectList(db.Documents, "ID", "Name", employeeDocument.DocumentId);
-                ViewBag.EmployeeId = new SelectList(db.Employees, "ID", "Name", employeeDocument.EmployeeId);
-                return View(employeeDocument);
-
+                db.EmployeeDocuments.Add(employeeDocument);
+                db.SaveChanges();
+                return RedirectToAction("Index/" + employeeDocument.EmployeeId);                
             }
-            catch
-            {
-                ViewBag.Message = "File upload failed!!";
-                return View();
-            }
-            
+
+            ViewBag.DocumentId = new SelectList(db.Documents, "ID", "Name", employeeDocument.DocumentId);
+            ViewBag.EmployeeId = new SelectList(db.Employees, "ID", "Name", employeeDocument.EmployeeId);
+            return View(employeeDocument);
         }
 
         // GET: EmployeeDocuments/Edit/5
@@ -146,7 +141,7 @@ namespace CCSolutionHRM.Controllers
                 return RedirectToAction("Index/" + employeeDocument.EmployeeId);
             }
             ViewBag.DocumentId = new SelectList(db.Documents, "ID", "Name", employeeDocument.DocumentId);
-            ViewBag.EmployeeId = new SelectList(db.Employees, "ID", "Name", employeeDocument.EmployeeId);            
+            ViewBag.EmployeeId = new SelectList(db.Employees, "ID", "Name", employeeDocument.EmployeeId);
             return View(employeeDocument);
         }
 
