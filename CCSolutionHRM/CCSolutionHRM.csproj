@@ -160,22 +160,37 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
-    <Compile Include="Controllers\EmployeeDocumentsController.cs" />
-    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\CCSolutionContext.cs" />
     <Compile Include="DAL\CCSolutionInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Attribute.cs" />
     <Compile Include="Models\Company.cs" />
-    <Compile Include="Models\CustomEmployee.cs" />
+    <Compile Include="Models\ContactType.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Designation.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeContact.cs" />
     <Compile Include="Models\EmployeeDocument.cs" />
+    <Compile Include="Models\EmployeeReference.cs" />
+    <Compile Include="Models\EmployementType.cs" />
+    <Compile Include="Models\EmployementStatus.cs" />
     <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Nationality.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\Relation.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoleAttribute.cs" />
+    <Compile Include="Models\RoleCompany.cs" />
+    <Compile Include="Models\RoleMenu.cs" />
+    <Compile Include="Models\RoleType.cs" />
+    <Compile Include="Models\RoleUsers.cs" />
     <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\WorkSite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +214,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Project\CCSolution\HRM\ProfilePic\1\Rizwan.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -235,21 +251,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Employees\Create.cshtml" />
-    <Content Include="Views\Employees\Delete.cshtml" />
-    <Content Include="Views\Employees\Details.cshtml" />
-    <Content Include="Views\Employees\Edit.cshtml" />
-    <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\Companies\Create.cshtml" />
     <Content Include="Views\Companies\Delete.cshtml" />
     <Content Include="Views\Companies\Details.cshtml" />
     <Content Include="Views\Companies\Edit.cshtml" />
     <Content Include="Views\Companies\Index.cshtml" />
-    <Content Include="Views\EmployeeDocuments\Create.cshtml" />
-    <Content Include="Views\EmployeeDocuments\Delete.cshtml" />
-    <Content Include="Views\EmployeeDocuments\Details.cshtml" />
-    <Content Include="Views\EmployeeDocuments\Edit.cshtml" />
-    <Content Include="Views\EmployeeDocuments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
