@@ -15,6 +15,7 @@ namespace CCSolutionHRM.DAL
         }
 
         public DbSet<Models.Attribute> Attributes { get; set; }
+        public DbSet<BloodGroup> BloodGroups { get; set; }
         public DbSet<Company> Companys { get; set; }
         public DbSet<ContactType> ContactTypes { get; set; }
         public DbSet<Department> Departments { get; set; }
@@ -27,9 +28,13 @@ namespace CCSolutionHRM.DAL
         public DbSet<EmployementType> EmployementTypes { get; set; }
         public DbSet<Gender> Genders { get; set; }
         public DbSet<Menu> Menus { get; set; }
+        public DbSet<MaritalStatus> MaritalStatuss { get; set; }
         public DbSet<Nationality> Nationalitys { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Qualification> Qualifications { get; set; }
+        public DbSet<Occupation> Occupations { get; set; }
         public DbSet<Relation> Relations { get; set; }
+        public DbSet<Religion> Religions { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<RoleAttribute> RoleAttributes { get; set; }
         public DbSet<RoleCompany> RoleCompanys { get; set; }

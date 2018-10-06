@@ -11,10 +11,78 @@ namespace CCSolutionHRM.DAL
     {
         protected override void Seed(CCSolutionContext context)
         {
+            #region Qualification
+            var qualification = new List<Qualification>
+            {
+                new Qualification{Name="SSC",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Qualification{Name="HSC",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Qualification{Name="Graduation",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Qualification{Name="Masters",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Qualification{Name="PHD",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Qualification{Name="MPhil",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Qualification{Name="Doctorate",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Qualification{Name="Other",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+            };
+            qualification.ForEach(s => context.Qualifications.Add(s));
+            context.SaveChanges();
+            #endregion
+ 
+
+            #region Relation
+            var relation = new List<Relation>
+            {
+                new Relation{Name="Grand Father",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Grand Mother",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Father",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Mother",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Brother",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Sister",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Spouse",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Son",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Daughter",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Grand Son",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Grand Daughter",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Uncle",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Aunty",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Cousin",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+            };
+            relation.ForEach(s => context.Relations.Add(s));
+            context.SaveChanges();
+            #endregion
+
+            #region MaritalStatus
+            var maritalStatus = new List<MaritalStatus>
+            {
+                new MaritalStatus{Name="Married",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new MaritalStatus{Name="Un Married",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new MaritalStatus{Name="Seprated",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+            };
+            maritalStatus.ForEach(s => context.MaritalStatuss.Add(s));
+            context.SaveChanges();
+            #endregion
+
+            #region Religion
+            var religion = new List<Religion>
+            {
+                new Religion{Name="Christianity",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Religion{Name="Islam",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Religion{Name="Nonreligious",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Religion{Name="Hinduism",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Religion{Name="Buddhism",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Religion{Name="Sikhism",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Religion{Name="Others",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+            };
+            religion.ForEach(s => context.Religions.Add(s));
+            context.SaveChanges();
+            #endregion
+
+            #region Company
             var company = new List<Company>
             {
                 new Company{Address="",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",DialingCode=971,EmailAddress="",Name="CCSolution",PhoneNumber="",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1",Url="",Deleted=false}
             };
+            company.ForEach(s => context.Companys.Add(s));
+            context.SaveChanges();
 
             var attribute = new List<Models.Attribute>
             {
@@ -26,7 +94,9 @@ namespace CCSolutionHRM.DAL
             };
             attribute.ForEach(s => context.Attributes.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region RoleType
             var roletype = new List<RoleType>
             {
                 new RoleType{Name="Super Admin",IgnoreCompany=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -35,7 +105,9 @@ namespace CCSolutionHRM.DAL
             };
             roletype.ForEach(s => context.RoleTypes.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region Role
             var role = new List<Role>
             {
                 new Role{Name="Super Admin",RoleTypeId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -44,7 +116,9 @@ namespace CCSolutionHRM.DAL
             };
             role.ForEach(s => context.Roles.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region RoleAttribute
             var roleattribute = new List<RoleAttribute>
             {
                 //Super Admin Attribute
@@ -68,7 +142,9 @@ namespace CCSolutionHRM.DAL
             };
             roleattribute.ForEach(s => context.RoleAttributes.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region Users
             var user = new List<Users>
             {
                 new Users{CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,LoginId="rizwanahmad",Name="Muhammad Rizwan",Password="Axact123",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -77,7 +153,9 @@ namespace CCSolutionHRM.DAL
             };
             user.ForEach(s => context.Userss.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region RoleUsers
             var roleuser = new List<RoleUsers>
             {
                 //Super Admin Attribute
@@ -87,12 +165,9 @@ namespace CCSolutionHRM.DAL
             };
             roleattribute.ForEach(s => context.RoleAttributes.Add(s));
             context.SaveChanges();
+            #endregion
 
-
-
-            company.ForEach(s => context.Companys.Add(s));
-            context.SaveChanges();
-
+            #region RoleCompany
             var rolecompany = new List<RoleCompany>
             {
                 new RoleCompany{CompanyId=1,RoleId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -101,8 +176,9 @@ namespace CCSolutionHRM.DAL
             };
             rolecompany.ForEach(s => context.RoleCompanys.Add(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Menu
             var menu = new List<Menu>
             {
                 new Menu{MenuClass="",Name="Home",Action="",ParentId=0,Sequence=1,Url="#",Viewable=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -137,7 +213,9 @@ namespace CCSolutionHRM.DAL
             };
             menu.ForEach(s => context.Menus.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region RoleMenu
             var rolemenu = new List<RoleMenu>
             {
                 new RoleMenu{MenuId=1,RoleId=3,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -187,16 +265,16 @@ namespace CCSolutionHRM.DAL
             };
             rolemenu.ForEach(s => context.RoleMenus.Add(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Department
             var departments = new List<Department>
             {
                 new Department{Name="Administration",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
                 new Department{Name="Human Resource",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
                 new Department{Name="Sales",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
                 new Department{Name="Training & Development",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Department{Name="Safety & Security",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Department{Name="Public Relations",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Department{Name="Safety & Security",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},                
                 new Department{Name="Procurement",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
                 new Department{Name="Compensation and Benefits",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
                 new Department{Name="Public Relations",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
@@ -205,7 +283,9 @@ namespace CCSolutionHRM.DAL
 
             departments.ForEach(s => context.Departments.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region Project
             var projects = new List<Project>
             {
                 new Project{Name="Project 1",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -223,8 +303,9 @@ namespace CCSolutionHRM.DAL
 
             projects.ForEach(s => context.Projects.Add(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Designation
             var designation = new List<Designation>
             {
                 new Designation{Name="President",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -245,8 +326,9 @@ namespace CCSolutionHRM.DAL
 
             designation.ForEach(s => context.Designations.Add(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region EmployementStatus
             var employementStatus = new List<EmployementStatus>
             {
                 new EmployementStatus{Name="OnService",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -258,7 +340,9 @@ namespace CCSolutionHRM.DAL
 
             employementStatus.ForEach(s => context.EmployementStatuss.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region EmployementType
             var employementType = new List<EmployementType>
             {
                 new EmployementType{Name="Temporary",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -269,7 +353,9 @@ namespace CCSolutionHRM.DAL
 
             employementStatus.ForEach(s => context.EmployementStatuss.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region WorkSite
             var workSite = new List<WorkSite>
             {
                 new WorkSite{Name="Dubai",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
@@ -285,8 +371,9 @@ namespace CCSolutionHRM.DAL
 
             workSite.ForEach(s => context.WorkSites.Add(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Gender
             var gender = new List<Gender>
             {
                 new Gender{CreationBy=1, CreationDate = DateTime.Now, CreationIP="127.0.0.1",Delete=false,Name="Male",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP="127.0.0.1"},
@@ -295,33 +382,37 @@ namespace CCSolutionHRM.DAL
 
             gender.ForEach(s => context.Genders.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region Employee
             var employee = new List<Employee>
             {
-                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,FatherName="Zain-Ul-Abdin",GenderId=1,HireDate=DateTime.Now.AddYears(-1),
-                    MotherName="Ishrat Janah",NationalityId=1,Title="Mr.",Name="Muhammad Rizwan",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
+                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,GenderId=1,HireDate=DateTime.Now.AddYears(-1),
+                    NationalityId=1,Title="Mr.",Name="Muhammad Rizwan",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
                     , UpdationIP = "127.0.0.1" },
 
-                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,FatherName="Muhammad Arif",GenderId=1,HireDate=DateTime.Now.AddYears(-1),
-                    MotherName="Kanwal Khan",NationalityId=1,Title="Mr.",Name="Muhammad Sabir",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
+                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,GenderId=1,HireDate=DateTime.Now.AddYears(-1),
+                    NationalityId=1,Title="Mr.",Name="Muhammad Sabir",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
                     , UpdationIP = "127.0.0.1" },
 
-                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,FatherName="Iqbal Ahmed",GenderId=1,HireDate=DateTime.Now.AddYears(-1),
-                    MotherName="Sherbano Alam",NationalityId=1,Title="Mr.",Name="Aisha",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
+                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,GenderId=1,HireDate=DateTime.Now.AddYears(-1),
+                    NationalityId=1,Title="Mr.",Name="Aisha",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
                     , UpdationIP = "127.0.0.1" },
 
-                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,FatherName="Afsar Ali",GenderId=1,HireDate=DateTime.Now.AddYears(-1),
-                    MotherName="Haleema Khatoon",NationalityId=1,Title="Mr.",Name="Hina Ali",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
+                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,GenderId=1,HireDate=DateTime.Now.AddYears(-1),
+                    NationalityId=1,Title="Mr.",Name="Hina Ali",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
                     , UpdationIP = "127.0.0.1" },
 
-                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,FatherName="Afsar Ali",GenderId=1,HireDate=DateTime.Now.AddYears(-1),
-                    MotherName="Haleema Khatoon",NationalityId=1,Title="Mr.",Name="Yousuf Ali",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
+                new Employee{CompanyId=1,DateOfBirth=DateTime.Now.AddYears(-35),DepartmentId=1,DesignationId=1,EmploymentStatusId=1,EmploymentTypeId=1,GenderId=1,HireDate=DateTime.Now.AddYears(-1),
+                    NationalityId=1,Title="Mr.",Name="Yousuf Ali",WorkSiteId=1,CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Delete = false, UpdationBy = 1, UpdationDate = DateTime.Now
                     , UpdationIP = "127.0.0.1" }
             };
 
             employee.ForEach(s => context.Employees.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region Nationality
             var nationality = new List<Nationality>
             {
                 new Nationality { CountryCode="AB",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=840,Name="Abkhazia",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
@@ -561,7 +652,9 @@ namespace CCSolutionHRM.DAL
 
             nationality.ForEach(s => context.Nationalitys.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region Document
             var document = new List<Document>
             {
                 new Document{CompanyId=1,CreationBy=1, CreationDate = DateTime.Now, CreationIP="127.0.0.1",Delete=false,Name="National Identity Card",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP="127.0.0.1"},
@@ -573,7 +666,9 @@ namespace CCSolutionHRM.DAL
 
             document.ForEach(s => context.Documents.Add(s));
             context.SaveChanges();
+            #endregion
 
+            #region EmployeeDocument
             var employeedocument = new List<EmployeeDocument>
             {
                 new EmployeeDocument{Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1612323-9",EmployeeId=1
@@ -624,7 +719,7 @@ namespace CCSolutionHRM.DAL
 
             employeedocument.ForEach(s => context.EmployeeDocuments.Add(s));
             context.SaveChanges();
-
+            #endregion
 
 
         }
