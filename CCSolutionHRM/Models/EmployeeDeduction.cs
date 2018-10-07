@@ -6,20 +6,17 @@ using System.Web;
 
 namespace CCSolutionHRM.Models
 {
-    public class EmployeeContact
+    public class EmployeeDeduction
     {
         public int ID { get; set; }
         [Required]
         public int EmployeeId { get; set; }
         [Required]
-        public int ContactTypeId { get; set; }
-        public string Address { get; set; }        
-        public int DialingCode { get; set; }
-        public string PhoneNumber { get; set; }
-        public string FaxNumber { get; set; }
-        public string City { get; set; }
-        public int NationalityId { get; set; }
-        public string Email { get; set; }
+        public int DeductionTypeId { get; set; }
+        public string Comments { get; set; }
+        public decimal Amount { get; set; }
+        public DateTime DeductionDate { get; set; }
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }
@@ -29,9 +26,6 @@ namespace CCSolutionHRM.Models
         public int UpdationBy { get; set; }
 
         public virtual Employee Employee { get; set; }
-        public virtual ContactType ContactType { get; set; }
-        public virtual Nationality Nationality { get; set; }
-
-
+        public virtual DeductionType DeductionType { get; set; }
     }
 }

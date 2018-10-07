@@ -6,11 +6,14 @@ using System.Web;
 
 namespace CCSolutionHRM.Models
 {
-    public class Gender
+    public class DeductionType
     {
         public int ID { get; set; }
         [Required]
+        public int CompanyId { get; set; }
+        [Required]
         public string Name { get; set; }
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }
@@ -18,5 +21,7 @@ namespace CCSolutionHRM.Models
         public DateTime UpdationDate { get; set; }
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
+
+        public virtual Company Company { get; set; }
     }
 }

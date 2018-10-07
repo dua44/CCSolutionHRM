@@ -6,14 +6,25 @@ using System.Web;
 
 namespace CCSolutionHRM.Models
 {
-    public class EmployeeContact
+    public class EmployeeSalary
     {
         public int ID { get; set; }
         [Required]
         public int EmployeeId { get; set; }
         [Required]
-        public int ContactTypeId { get; set; }
-        public string Address { get; set; }        
+        public int SalaryTypeId { get; set; }        
+        public string PeronsalNumber { get; set; }
+        public decimal GratuityAmount { get; set; }
+        public DateTime GratuityStartDate { get; set; }
+        public DateTime GratuityEndDate { get; set; }
+        public decimal BasicSalary { get; set; }
+        public decimal GrossSalary { get; set; }
+        [Required]
+        public int BankId { get; set; }
+        [Required]
+        public int CurrencyId { get; set; }
+
+        public string Address { get; set; }
         public int DialingCode { get; set; }
         public string PhoneNumber { get; set; }
         public string FaxNumber { get; set; }
@@ -29,9 +40,8 @@ namespace CCSolutionHRM.Models
         public int UpdationBy { get; set; }
 
         public virtual Employee Employee { get; set; }
-        public virtual ContactType ContactType { get; set; }
-        public virtual Nationality Nationality { get; set; }
-
-
+        public virtual SalaryType SalaryType { get; set; }
+        public virtual Bank Bank { get; set; }
+        public virtual Currency Currency { get; set; }
     }
 }

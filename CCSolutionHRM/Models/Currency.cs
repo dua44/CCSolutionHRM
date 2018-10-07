@@ -6,11 +6,13 @@ using System.Web;
 
 namespace CCSolutionHRM.Models
 {
-    public class Gender
+    public class Currency
     {
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
+        [Required]
+        public string Symbol { get; set; }
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }

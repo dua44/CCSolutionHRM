@@ -166,18 +166,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AllowanceDesignationMapping.cs" />
+    <Compile Include="Models\Allownace.cs" />
     <Compile Include="Models\Attribute.cs" />
     <Compile Include="Models\BloodGroup.cs" />
     <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\CompanyBank.cs" />
     <Compile Include="Models\ContactType.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\DeductionType.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Designation.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeAllowance.cs" />
     <Compile Include="Models\EmployeeContact.cs" />
+    <Compile Include="Models\EmployeeDeduction.cs" />
     <Compile Include="Models\EmployeeDocument.cs" />
     <Compile Include="Models\EmployeeFamily.cs" />
     <Compile Include="Models\EmployeeReference.cs" />
+    <Compile Include="Models\EmployeeSalary.cs" />
     <Compile Include="Models\EmployementType.cs" />
     <Compile Include="Models\EmployementStatus.cs" />
     <Compile Include="Models\Gender.cs" />
@@ -195,6 +203,7 @@
     <Compile Include="Models\RoleMenu.cs" />
     <Compile Include="Models\RoleType.cs" />
     <Compile Include="Models\RoleUsers.cs" />
+    <Compile Include="Models\SalaryType.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Models\WorkSite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

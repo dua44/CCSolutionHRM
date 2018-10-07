@@ -26,7 +26,6 @@ namespace CCSolutionHRM.DAL
             qualification.ForEach(s => context.Qualifications.Add(s));
             context.SaveChanges();
             #endregion
- 
 
             #region Relation
             var relation = new List<Relation>
@@ -44,7 +43,8 @@ namespace CCSolutionHRM.DAL
                 new Relation{Name="Grand Daughter",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
                 new Relation{Name="Uncle",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
                 new Relation{Name="Aunty",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Relation{Name="Cousin",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+                new Relation{Name="Cousin",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Relation{Name="Friend",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
             };
             relation.ForEach(s => context.Relations.Add(s));
             context.SaveChanges();
@@ -672,55 +672,54 @@ namespace CCSolutionHRM.DAL
             var employeedocument = new List<EmployeeDocument>
             {
                 new EmployeeDocument{Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1612323-9",EmployeeId=1
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Passport #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=2,DocumentNumber="CH9893221",EmployeeId=1
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Visa #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=3,DocumentNumber="CH98254821",EmployeeId=1
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="SSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="HSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Bachlors Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Masters Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
 
                 new EmployeeDocument{Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1611234-9",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Passport #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=2,DocumentNumber="CH9892221",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Visa #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=3,DocumentNumber="CH92363221",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="SSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="HSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Bachlors Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Masters Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
 
                 new EmployeeDocument{Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1611234-9",EmployeeId=3
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Passport #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=2,DocumentNumber="CH9892221",EmployeeId=3
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Visa #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=3,DocumentNumber="CH92363221",EmployeeId=3
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="SSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="HSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Bachlors Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""},
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
                 new EmployeeDocument{Comments="Masters Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,PhysicalLocation=""}
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""}
             };
 
             employeedocument.ForEach(s => context.EmployeeDocuments.Add(s));
             context.SaveChanges();
             #endregion
-
 
         }
     }

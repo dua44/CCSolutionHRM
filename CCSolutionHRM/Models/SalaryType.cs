@@ -6,7 +6,7 @@ using System.Web;
 
 namespace CCSolutionHRM.Models
 {
-    public class Gender
+    public class SalaryType
     {
         public int ID { get; set; }
         [Required]
