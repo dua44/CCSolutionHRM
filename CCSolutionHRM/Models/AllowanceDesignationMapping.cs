@@ -9,14 +9,15 @@ namespace CCSolutionHRM.Models
     public class AllowanceDesignationMapping
     {
         public int ID { get; set; }
-        [Required]
+        
         public int CompanyId { get; set; }
-        [Required]
+        
         public int DesignationId { get; set; }
-        [Required]
+        
         public int EmployementTypeId { get; set; }
-        [Required]
+        
         public int AllowanceId { get; set; }
+
         public decimal Amount { get; set; }
 
         public bool Delete { get; set; }
@@ -30,6 +31,6 @@ namespace CCSolutionHRM.Models
         public virtual Company Company { get; set; }
         public virtual Designation Designation { get; set; }
         public virtual EmployementType EmployementType { get; set; }
-        public virtual Allownace Allownace { get; set; }
+        public virtual Allowance Allowance { get; set; }
     }
 }

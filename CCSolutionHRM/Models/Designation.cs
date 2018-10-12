@@ -8,12 +8,11 @@ namespace CCSolutionHRM.Models
 {
     public class Designation
     {
-        public int ID { get; set; }
-        [Required]
-        public string Name { get; set; }
-        [Required]
+        public int ID { get; set; }        
+        public string Name { get; set; }        
         public int CompanyId { get; set; }
         public int Total { get; set; }
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }

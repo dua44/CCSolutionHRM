@@ -6,13 +6,12 @@ using System.Web;
 
 namespace CCSolutionHRM.Models
 {
-    public class Bank
+    public class CompanyBank
     {
         public int ID { get; set; }
-        [Required]
         public int CompanyId { get; set; }
-        [Required]
-        public string Name { get; set; }        
+        public string Name { get; set; }
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }

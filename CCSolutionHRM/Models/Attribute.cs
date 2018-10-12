@@ -9,7 +9,7 @@ namespace CCSolutionHRM.Models
     public class Attribute
     {
         public int ID { get; set; }
-        [Required]
+        
         public string Name { get; set; }
         public bool Delete { get; set; }
         public bool IgnoreMenu { get; set; }

@@ -9,9 +9,9 @@ namespace CCSolutionHRM.Models
     public class RoleUsers
     {
         public int ID { get; set; }
-        [Required]
+        
         public int RoleId { get; set; }
-        [Required]
+        
         public int UserId { get; set; }
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }

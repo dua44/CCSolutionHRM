@@ -6,13 +6,13 @@ using System.Web;
 
 namespace CCSolutionHRM.Models
 {
-    public class Allownace
+    public class Allowance
     {
         public int ID { get; set; }
-        [Required]
         public int CompanyId { get; set; }
-        [Required]        
         public string Name { get; set; }
+        public decimal Amount { get; set; }
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }

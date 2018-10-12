@@ -10,7 +10,7 @@ namespace CCSolutionHRM.Models
     {
         public int ID { get; set; }
         public int CompanyId { get; set; }
-        [Required]
+        
         public string Name { get; set; }
         public int Total { get; set; }
         public bool Delete { get; set; }

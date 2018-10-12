@@ -10,20 +10,20 @@ namespace CCSolutionHRM.Models
     public class EmployeeDocument
     {
         public int ID { get; set; }
-        [Required]
+        
         public int EmployeeId { get; set; }
-        [Required]
+        
         public int DocumentId { get; set; }
-        [Required]
+        
         public string DocumentNumber { get; set; }
-        [Required]
+        
         public int NationalityId { get; set; }
-        [Required]
+        
         public string IssuancePlace { get; set; }
         public string Comments { get; set; }
-        [Required]
+        
         public DateTime IssueDate { get; set; }
-        [Required]
+        
         public DateTime ExpiryDate { get; set; }        
         public string SoftCopyPath { get; set; }
 

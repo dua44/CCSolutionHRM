@@ -9,9 +9,9 @@ namespace CCSolutionHRM.Models
     public class EmployementStatus
     {
         public int ID { get; set; }
-        [Required]
+        
         public int CompanyId { get; set; }
-        [Required]
+        
         public string Name { get; set; }        
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }

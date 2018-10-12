@@ -9,33 +9,33 @@ namespace CCSolutionHRM.Models
     public class Employee
     {
         public int ID { get; set; }
-        [Required]
+        
         public int CompanyId { get; set; }
-        [Required]
+        
         public string Title { get; set; }
-        [Required]
+        
         public string Name { get; set; }
-        [Required]
+        
         public int EmploymentTypeId { get; set; }
-        [Required]
+        
         public int EmploymentStatusId { get; set; }
-        [Required]
+        
         public int WorkSiteId { get; set; }
-        [Required]
+        
         public int DesignationId { get; set; }
-        [Required]
+        
         public int ReligionId { get; set; }
-        [Required]
+        
         public int MaritalStatusId { get; set; }
-        [Required]
+        
         public int DepartmentId { get; set; }
-        [Required]
+        
         public int BloodGroupId { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd MMM, yyyy}")]
         public DateTime DateOfBirth { get; set; }
-        [Required]
+        
         public int GenderId { get; set; }
-        [Required]
+        
         public int NationalityId { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd MMM, yyyy hh:mm:ss}")]
         public DateTime HireDate { get; set; }

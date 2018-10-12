@@ -9,9 +9,9 @@ namespace CCSolutionHRM.Models
     public class Department
     {
         public int ID { get; set; }
-        [Required]
+        
         public int CompanyId { get; set; }
-        [Required]
+        
         public string Name { get; set; }
         public int Total { get; set; }
         public bool Delete { get; set; }

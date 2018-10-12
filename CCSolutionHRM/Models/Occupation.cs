@@ -8,11 +8,10 @@ namespace CCSolutionHRM.Models
 {
     public class Occupation
     {
-        public int ID { get; set; }
-        [Required]
+        public int ID { get; set; }        
         public string Name { get; set; }
-        [Required]
-        public string CompanyId { get; set; }
+        public int CompanyId { get; set; }
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }

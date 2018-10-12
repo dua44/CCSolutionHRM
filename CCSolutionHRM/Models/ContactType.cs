@@ -8,9 +8,9 @@ namespace CCSolutionHRM.Models
 {
     public class ContactType
     {
-        public int ID { get; set; }
-        [Required]
+        public int ID { get; set; }        
         public string Name { get; set; }
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }

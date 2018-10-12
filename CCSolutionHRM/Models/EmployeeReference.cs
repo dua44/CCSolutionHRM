@@ -9,11 +9,11 @@ namespace CCSolutionHRM.Models
     public class EmployeeReference
     {
         public int ID { get; set; }
-        [Required]
+        
         public int EmployeeId { get; set; }
-        [Required]
+        
         public string Name { get; set; }
-        [Required]
+        
         public int DialingCode { get; set; }
         public string PhoneNumber { get; set; }
         public int RelationId { get; set; }

@@ -9,9 +9,9 @@ namespace CCSolutionHRM.Models
     public class RoleAttribute
     {
         public int ID { get; set; }
-        [Required]
+        
         public int RoleId { get; set; }
-        [Required]
+        
         public int AttributeId { get; set; }
         public bool Delete { get; set; }
         public bool IgnoreMenu { get; set; }

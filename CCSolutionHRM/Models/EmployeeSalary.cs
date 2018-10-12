@@ -9,9 +9,9 @@ namespace CCSolutionHRM.Models
     public class EmployeeSalary
     {
         public int ID { get; set; }
-        [Required]
+        
         public int EmployeeId { get; set; }
-        [Required]
+        
         public int SalaryTypeId { get; set; }        
         public string PeronsalNumber { get; set; }
         public decimal GratuityAmount { get; set; }
@@ -19,18 +19,11 @@ namespace CCSolutionHRM.Models
         public DateTime GratuityEndDate { get; set; }
         public decimal BasicSalary { get; set; }
         public decimal GrossSalary { get; set; }
-        [Required]
-        public int BankId { get; set; }
-        [Required]
+        
+        public int CompanyBankId { get; set; }
+        
         public int CurrencyId { get; set; }
 
-        public string Address { get; set; }
-        public int DialingCode { get; set; }
-        public string PhoneNumber { get; set; }
-        public string FaxNumber { get; set; }
-        public string City { get; set; }
-        public int NationalityId { get; set; }
-        public string Email { get; set; }
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }
@@ -41,7 +34,7 @@ namespace CCSolutionHRM.Models
 
         public virtual Employee Employee { get; set; }
         public virtual SalaryType SalaryType { get; set; }
-        public virtual Bank Bank { get; set; }
+        public virtual CompanyBank CompanyBank { get; set; }
         public virtual Currency Currency { get; set; }
     }
 }
