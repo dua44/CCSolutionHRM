@@ -20,6 +20,6 @@ namespace CCSolutionHRM.Models
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
 
-        public virtual Company Company { get; set; }
+ 
     }
 }

@@ -53,15 +53,6 @@ namespace CCSolutionHRM.Models
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
 
-        public virtual Company Company { get; set; }
-        public virtual EmployementType Document { get; set; }
-        public virtual EmployementStatus EmployementStatus { get; set; }
-        public virtual WorkSite WorkSite { get; set; }
-        public virtual Designation Designation { get; set; }
-        public virtual Department Department { get; set; }
-        public virtual Gender Gender { get; set; }
-        public virtual Nationality Nationality { get; set; }
-        public virtual Religion Religion { get; set; }
-        public virtual MaritalStatus MaritalStatus { get; set; }
+ 
     }
 }

@@ -9,25 +9,15 @@ namespace CCSolutionHRM.Models
     public class EmployeeWorkExperience
     {
         public int ID { get; set; }
-        
         public int EmployeeId { get; set; }
-        
         public int DesignationId { get; set; }
-        
         public DateTime FromDate { get; set; }
-        
         public DateTime ToDate { get; set; }
-        
         public string CompanyName { get; set; }
-        
         public decimal StartingSalary { get; set; }
-        
         public decimal LastSalary { get; set; }
-        
         public string Comments { get; set; }
-        
         public string ReasonforLeave { get; set; }
-        
         public string ContactNumber { get; set; }
 
         public bool Delete { get; set; }
@@ -37,8 +27,6 @@ namespace CCSolutionHRM.Models
         public DateTime UpdationDate { get; set; }
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
-
-        public virtual Employee Employee { get; set; }
-        public virtual Designation Designation { get; set; }
+ 
     }
 }

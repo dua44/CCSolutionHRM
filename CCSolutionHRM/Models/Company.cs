@@ -22,6 +22,6 @@ namespace CCSolutionHRM.Models
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
 
-        public virtual Nationality Nationality { get; set; }
+ 
     }
 }

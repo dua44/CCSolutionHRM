@@ -28,9 +28,6 @@ namespace CCSolutionHRM.Models
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
 
-        public virtual Company Company { get; set; }
-        public virtual Designation Designation { get; set; }
-        public virtual EmployementType EmployementType { get; set; }
-        public virtual Allowance Allowance { get; set; }
+ 
     }
 }

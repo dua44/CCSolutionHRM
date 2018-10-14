@@ -25,7 +25,6 @@ namespace CCSolutionHRM.Models
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
 
-        public virtual Employee Employee { get; set; }
-        public virtual DeductionType DeductionType { get; set; }
+ 
     }
 }

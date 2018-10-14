@@ -9,11 +9,10 @@ namespace CCSolutionHRM.Models
     public class Department
     {
         public int ID { get; set; }
-        
         public int CompanyId { get; set; }
-        
         public string Name { get; set; }
         public int Total { get; set; }
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }
@@ -21,7 +20,6 @@ namespace CCSolutionHRM.Models
         public DateTime UpdationDate { get; set; }
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
-
-        public virtual Nationality Nationality { get; set; }
+ 
     }
 }

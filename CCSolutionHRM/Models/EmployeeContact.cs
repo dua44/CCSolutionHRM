@@ -26,10 +26,7 @@ namespace CCSolutionHRM.Models
         public DateTime UpdationDate { get; set; }
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
-
-        public virtual Employee Employee { get; set; }
-        public virtual ContactType ContactType { get; set; }
-        public virtual Nationality Nationality { get; set; }
+ 
 
 
     }
