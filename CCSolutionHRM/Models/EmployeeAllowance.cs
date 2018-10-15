@@ -8,8 +8,10 @@ namespace CCSolutionHRM.Models
 {
     public class EmployeeAllowance
     {
-        public int ID { get; set; }        
-        public int EmployeeId { get; set; }        
+        public int ID { get; set; }       
+        [Required] 
+        public int EmployeeId { get; set; }
+        [Required]
         public int AllowanceDesignationMappingId { get; set; }
 
         public bool Delete { get; set; }

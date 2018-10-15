@@ -9,8 +9,11 @@ namespace CCSolutionHRM.Models
     public class Allowance
     {
         public int ID { get; set; }
+        [Required]
         public int CompanyId { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public decimal Amount { get; set; }
 
         public bool Delete { get; set; }

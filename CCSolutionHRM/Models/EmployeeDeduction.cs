@@ -9,10 +9,11 @@ namespace CCSolutionHRM.Models
     public class EmployeeDeduction
     {
         public int ID { get; set; }
-        
+        [Required]
         public int EmployeeId { get; set; }
-        
+        [Required]
         public int DeductionTypeId { get; set; }
+        
         public string Comments { get; set; }
         public decimal Amount { get; set; }
         public DateTime DeductionDate { get; set; }

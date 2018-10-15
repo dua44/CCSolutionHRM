@@ -9,15 +9,15 @@ namespace CCSolutionHRM.Models
     public class AllowanceDesignationMapping
     {
         public int ID { get; set; }
-        
+        [Required]
         public int CompanyId { get; set; }
-        
+        [Required]
         public int DesignationId { get; set; }
-        
+        [Required]
         public int EmployementTypeId { get; set; }
-        
+        [Required]
         public int AllowanceId { get; set; }
-
+        [Required]
         public decimal Amount { get; set; }
 
         public bool Delete { get; set; }

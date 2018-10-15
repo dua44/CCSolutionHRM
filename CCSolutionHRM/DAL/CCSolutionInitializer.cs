@@ -15,7 +15,8 @@ namespace CCSolutionHRM.DAL
             #region Company
             var company = new List<Company>
             {
-                new Company{Address="",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",DialingCode=971,EmailAddress="",Name="CCSolution",PhoneNumber="",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1",Url="",Deleted=false}
+                new Company{Address="",DialingCode=971,EmailAddress="info@ccsolution.com",Name="CC Solutions",PhoneNumber="1102458",Url="http://www.ccsolution.com" 
+                , CreationBy = 1, CreationDate = DateTime.Now, CreationIP = "127.0.0.1", Deleted = false, UpdationBy = 1, UpdationDate = DateTime.Now, UpdationIP = "127.0.0.1" }
             };
             company.ForEach(s => context.Companys.Add(s));
             context.SaveChanges();
@@ -280,11 +281,11 @@ namespace CCSolutionHRM.DAL
             #region Allowance
             var allowance = new List<Allowance>
             {
-                new Allowance{Name="Other Allowances",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Allowance{Name="Medical",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Allowance{Name="Transport",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Allowance{Name="Health",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Allowance{Name="House",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+                new Allowance{Name="Other Allowances",CompanyId=1,Amount=5000,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Allowance{Name="Medical",CompanyId=1,Amount=5000,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Allowance{Name="Transport",CompanyId=1,Amount=5000,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Allowance{Name="Health",CompanyId=1,Amount=5000,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Allowance{Name="House",CompanyId=1,Amount=5000,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
 
             };
             allowance.ForEach(s => context.Allowances.Add(s));
@@ -754,11 +755,11 @@ namespace CCSolutionHRM.DAL
             #region Attribute
             var attribute = new List<Models.Attribute>
             {
-                new Models.Attribute{Name="Create",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Models.Attribute{Name="Delete",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Models.Attribute{Name="Details",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Models.Attribute{Name="Edit",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Models.Attribute{Name="List",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+                new Models.Attribute{Name="Create",CreationBy=1,IgnoreClient=false,IgnoreMenu=false,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Models.Attribute{Name="Delete",CreationBy=1,IgnoreClient=false,IgnoreMenu=false,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Models.Attribute{Name="Details",CreationBy=1,IgnoreClient=false,IgnoreMenu=false,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Models.Attribute{Name="Edit",CreationBy=1,IgnoreClient=false,IgnoreMenu=false,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Models.Attribute{Name="List",CreationBy=1,IgnoreClient=false,IgnoreMenu=false,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
             };
             attribute.ForEach(s => context.Attributes.Add(s));
             context.SaveChanges();

@@ -8,7 +8,8 @@ namespace CCSolutionHRM.Models
 {
     public class SalaryType
     {
-        public int ID { get; set; }        
+        public int ID { get; set; }
+        [Required]
         public string Name { get; set; }
 
         public bool Delete { get; set; }

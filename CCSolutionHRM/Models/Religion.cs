@@ -9,8 +9,9 @@ namespace CCSolutionHRM.Models
     public class Religion
     {
         public int ID { get; set; }
-        
+        [Required]
         public string Name { get; set; }               
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }

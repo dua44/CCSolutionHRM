@@ -8,8 +8,10 @@ namespace CCSolutionHRM.Models
 {
     public class Occupation
     {
-        public int ID { get; set; }        
+        public int ID { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public int CompanyId { get; set; }
 
         public bool Delete { get; set; }
@@ -20,6 +22,6 @@ namespace CCSolutionHRM.Models
         public string UpdationIP { get; set; }
         public int UpdationBy { get; set; }
 
-        public virtual Company Company { get; set; }
+        
     }
 }

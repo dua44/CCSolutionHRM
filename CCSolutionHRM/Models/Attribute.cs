@@ -9,11 +9,14 @@ namespace CCSolutionHRM.Models
     public class Attribute
     {
         public int ID { get; set; }
-        
+        [Required]
         public string Name { get; set; }
-        public bool Delete { get; set; }
+        [Required]
         public bool IgnoreMenu { get; set; }
+        [Required]
         public bool IgnoreClient { get; set; }
+
+        public bool Delete { get; set; }        
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }
         public int CreationBy { get; set; }

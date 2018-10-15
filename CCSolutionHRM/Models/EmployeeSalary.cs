@@ -9,8 +9,13 @@ namespace CCSolutionHRM.Models
     public class EmployeeSalary
     {
         public int ID { get; set; }
+        [Required]
+        public int RelationId { get; set; }
+        [Required]
         public int EmployeeId { get; set; }
+        [Required]
         public int SalaryTypeId { get; set; }        
+
         public string PeronsalNumber { get; set; }
         public decimal GratuityAmount { get; set; }
         public DateTime GratuityStartDate { get; set; }

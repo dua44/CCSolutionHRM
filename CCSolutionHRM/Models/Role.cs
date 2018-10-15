@@ -9,10 +9,11 @@ namespace CCSolutionHRM.Models
     public class Role
     {
         public int ID { get; set; }
-        
+        [Required]
         public string Name { get; set; }
-        
+        [Required]
         public int RoleTypeId { get; set; }
+
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }
         public string CreationIP { get; set; }

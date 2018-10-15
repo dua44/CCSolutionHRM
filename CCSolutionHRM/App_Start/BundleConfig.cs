@@ -57,7 +57,9 @@ namespace CCSolutionHRM
                 "~/css/lib/owl.theme.default.min.css",
                 "~/css/lib/bootstrap/bootstrap.min.css",
                 "~/css/helper.css",
-                "~/css/style.css"));
+                "~/css/style.css",
+                "~/css/lib/calendar2/semantic.ui.min.css",
+                "~/css/lib/calendar2/pignose.calendar.min.css"));
 
 
 
