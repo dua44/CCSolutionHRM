@@ -332,6 +332,24 @@ namespace CCSolutionHRM.DAL
             context.SaveChanges();
             #endregion
 
+            #region Department
+            var departments = new List<Department>
+            {
+                new Department{Name="Administration",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Department{Name="Human Resource",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Department{Name="Sales",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Department{Name="Training & Development",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Department{Name="Safety & Security",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Department{Name="Procurement",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Department{Name="Compensation and Benefits",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Department{Name="Public Relations",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+
+            };
+
+            departments.ForEach(s => context.Departments.Add(s));
+            context.SaveChanges();
+            #endregion
+
             #region Employee
             var employee = new List<Employee>
             {
@@ -791,23 +809,23 @@ namespace CCSolutionHRM.DAL
             var roleattribute = new List<RoleAttribute>
             {
                 //Super Admin Attribute
-                new RoleAttribute{AttributeId=1,RoleId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=2,RoleId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=3,RoleId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=4,RoleId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=5,RoleId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=1,RoleId=1,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=2,RoleId=1,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=3,RoleId=1,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=4,RoleId=1,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=5,RoleId=1,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
 
                 //Admin Attribute
-                new RoleAttribute{AttributeId=1,RoleId=2,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=2,RoleId=2,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=3,RoleId=2,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=4,RoleId=2,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=5,RoleId=2,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=1,RoleId=2,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=2,RoleId=2,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=3,RoleId=2,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=4,RoleId=2,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=5,RoleId=2,IgnoreClient=true,IgnoreMenu=true,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
                 
                 //User Attribute
-                new RoleAttribute{AttributeId=3,RoleId=3,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=4,RoleId=3,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new RoleAttribute{AttributeId=5,RoleId=3,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+                new RoleAttribute{AttributeId=3,RoleId=3,IgnoreClient=false,IgnoreMenu=false,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=4,RoleId=3,IgnoreClient=false,IgnoreMenu=false,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new RoleAttribute{AttributeId=5,RoleId=3,IgnoreClient=false,IgnoreMenu=false,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
             };
             roleattribute.ForEach(s => context.RoleAttributes.Add(s));
             context.SaveChanges();
@@ -816,9 +834,9 @@ namespace CCSolutionHRM.DAL
             #region Users
             var user = new List<Users>
             {
-                new Users{CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,LoginId="rizwanahmad",Name="Muhammad Rizwan",Password="Axact123",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Users{CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,LoginId="sabir",Name="Muhammad Sabir",Password="Axact123",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Users{CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,LoginId="aisha",Name="Aisha",Password="Axact123",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
+                new Users{CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,LoginId="rizwanahmad",Name="Muhammad Rizwan",Password="user1@123",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Users{CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,LoginId="sabir",Name="Muhammad Sabir",Password="user2@123",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
+                new Users{CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,LoginId="aisha",Name="Aisha",Password="user3@123",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
             };
             user.ForEach(s => context.Userss.Add(s));
             context.SaveChanges();
@@ -935,25 +953,7 @@ namespace CCSolutionHRM.DAL
             rolemenu.ForEach(s => context.RoleMenus.Add(s));
             context.SaveChanges();
             #endregion
-
-            #region Department
-            var departments = new List<Department>
-            {
-                new Department{Name="Administration",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Department{Name="Human Resource",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Department{Name="Sales",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Department{Name="Training & Development",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Department{Name="Safety & Security",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Department{Name="Procurement",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Department{Name="Compensation and Benefits",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"},
-                new Department{Name="Public Relations",CompanyId=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1"}
-
-            };
-
-            departments.ForEach(s => context.Departments.Add(s));
-            context.SaveChanges();
-            #endregion
-
+            
             #region Project
             var projects = new List<Project>
             {
@@ -1029,8 +1029,8 @@ namespace CCSolutionHRM.DAL
                 new Nationality { CountryCode="AO",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=244,Name="Angola",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="AI",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=1264,Name="Anguilla",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="AQ",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=672,Name="Antarctica",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
-                new Nationality { CountryCode="Ag",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=1268,Name="Antigua And Barbuda",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
-                new Nationality { CountryCode="ab",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=1268,Name="Antigua And Barbuda",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
+                new Nationality { CountryCode="Ag",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=1268,Name="Antigua & Barbuda",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
+                new Nationality { CountryCode="ab",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=1268,Name="Antigua & Barbuda",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="AR",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=54,Name="Argentina",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="AM",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=374,Name="Armenia",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="AW",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=297,Name="Aruba",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
@@ -1048,13 +1048,13 @@ namespace CCSolutionHRM.DAL
                 new Nationality { CountryCode="Bm",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=1441,Name="Bermuda",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="BT",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=975,Name="Bhutan",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="BO",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=591,Name="Bolivia",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
-                new Nationality { CountryCode="BA",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=387,Name="Bosnia And Herzegovina",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
+                new Nationality { CountryCode="BA",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=387,Name="Bosnia & Herzegovina",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="Bw",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=267,Name="Botswana",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="BR",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=55,Name="Brazil",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="BN",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=673,Name="Brunei",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="BG",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=359,Name="Bulgaria",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="Bf",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=266,Name="Burkina Faso",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
-                new Nationality { CountryCode="MM",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=95,Name="Burma (Myanmar)",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
+                new Nationality { CountryCode="MM",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=95,Name="Burma",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="BI",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=257,Name="Burundi",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="KH",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=855,Name="Cambodia",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
                 new Nationality { CountryCode="CM",CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DialingCode=237,Name="Cameroon",UpdationBy=1,UpdationDate=DateTime.Now,UpdationIP="127.0.0.1" },
@@ -1266,7 +1266,8 @@ namespace CCSolutionHRM.DAL
                 new Document{CompanyId=1,CreationBy=1, CreationDate = DateTime.Now, CreationIP="127.0.0.1",Delete=false,Name="PassPort",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP="127.0.0.1"},
                 new Document{CompanyId=1,CreationBy=1, CreationDate = DateTime.Now, CreationIP="127.0.0.1",Delete=false,Name="Visa",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP="127.0.0.1"},
                 new Document{CompanyId=1,CreationBy=1, CreationDate = DateTime.Now, CreationIP="127.0.0.1",Delete=false,Name="Education",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP="127.0.0.1"},
-                new Document{CompanyId=1,CreationBy=1, CreationDate = DateTime.Now, CreationIP="127.0.0.1",Delete=false,Name="Health Insurance",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP="127.0.0.1"}
+                new Document{CompanyId=1,CreationBy=1, CreationDate = DateTime.Now, CreationIP="127.0.0.1",Delete=false,Name="Health Insurance",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP="127.0.0.1"},
+                new Document{CompanyId=1,CreationBy=1, CreationDate = DateTime.Now, CreationIP="127.0.0.1",Delete=false,Name="Driving License",UpdationBy=1, UpdationDate=DateTime.Now, UpdationIP="127.0.0.1"}
             };
 
             document.ForEach(s => context.Documents.Add(s));
@@ -1276,49 +1277,49 @@ namespace CCSolutionHRM.DAL
             #region EmployeeDocument
             var employeedocument = new List<EmployeeDocument>
             {
-                new EmployeeDocument{Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1612323-9",EmployeeId=1
+                new EmployeeDocument{IssuancePlace="",Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1612323-9",EmployeeId=1
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Passport #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=2,DocumentNumber="CH9893221",EmployeeId=1
+                new EmployeeDocument{IssuancePlace="",Comments="Passport #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=2,DocumentNumber="CH9893221",EmployeeId=1
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Visa #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=3,DocumentNumber="CH98254821",EmployeeId=1
+                new EmployeeDocument{IssuancePlace="",Comments="Visa #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=3,DocumentNumber="CH98254821",EmployeeId=1
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="SSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
+                new EmployeeDocument{IssuancePlace="",Comments="SSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="HSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
+                new EmployeeDocument{IssuancePlace="",Comments="HSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Bachlors Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
+                new EmployeeDocument{IssuancePlace="",Comments="Bachlors Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Masters Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-
-                new EmployeeDocument{Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1611234-9",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Passport #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=2,DocumentNumber="CH9892221",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Visa #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=3,DocumentNumber="CH92363221",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="SSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="HSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Bachlors Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
-                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Masters Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
+                new EmployeeDocument{IssuancePlace="",Comments="Masters Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="123456",EmployeeId=1
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
 
-                new EmployeeDocument{Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1611234-9",EmployeeId=3
+                new EmployeeDocument{IssuancePlace="",Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1611234-9",EmployeeId=2
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Passport #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=2,DocumentNumber="CH9892221",EmployeeId=3
+                new EmployeeDocument{IssuancePlace="",Comments="Passport #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=2,DocumentNumber="CH9892221",EmployeeId=2
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Visa #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=3,DocumentNumber="CH92363221",EmployeeId=3
+                new EmployeeDocument{IssuancePlace="",Comments="Visa #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=3,DocumentNumber="CH92363221",EmployeeId=2
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="SSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
+                new EmployeeDocument{IssuancePlace="",Comments="SSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="HSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
+                new EmployeeDocument{IssuancePlace="",Comments="HSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Bachlors Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
+                new EmployeeDocument{IssuancePlace="",Comments="Bachlors Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
-                new EmployeeDocument{Comments="Masters Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
+                new EmployeeDocument{IssuancePlace="",Comments="Masters Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=2
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
+
+                new EmployeeDocument{IssuancePlace="",Comments="NIC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=1,DocumentNumber="42101-1611234-9",EmployeeId=3
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
+                new EmployeeDocument{IssuancePlace="",Comments="Passport #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=2,DocumentNumber="CH9892221",EmployeeId=3
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
+                new EmployeeDocument{IssuancePlace="",Comments="Visa #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=3,DocumentNumber="CH92363221",EmployeeId=3
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
+                new EmployeeDocument{IssuancePlace="",Comments="SSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
+                new EmployeeDocument{IssuancePlace="",Comments="HSC #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
+                new EmployeeDocument{IssuancePlace="",Comments="Bachlors Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
+                ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""},
+                new EmployeeDocument{IssuancePlace="",Comments="Masters Degree #",UpdationIP="127.0.0.1",UpdationDate=DateTime.Now,UpdationBy=1,CreationBy=1,CreationDate=DateTime.Now,CreationIP="127.0.0.1",Delete=false,DocumentId=4,DocumentNumber="1234565",EmployeeId=3
                 ,ExpiryDate=DateTime.Now.AddYears(5),IssueDate=DateTime.Now.AddYears(-2),NationalityId=1,SoftCopyPath=""}
             };
 

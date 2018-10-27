@@ -11,6 +11,7 @@ namespace CCSolutionHRM.Models
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
+        [Required]
         public int CompanyId { get; set; }
         public int Total { get; set; }
 

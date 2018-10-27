@@ -13,10 +13,12 @@ namespace CCSolutionHRM.Models
         public int EmployeeId { get; set; }
         [Required]
         public int DeductionTypeId { get; set; }
-        
-        public string Comments { get; set; }
+        [Required]
         public decimal Amount { get; set; }
+        [Required]
         public DateTime DeductionDate { get; set; }
+        public string Comments { get; set; }
+        
 
         public bool Delete { get; set; }
         public DateTime CreationDate { get; set; }

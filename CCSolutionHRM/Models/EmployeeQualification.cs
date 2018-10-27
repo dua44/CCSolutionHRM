@@ -8,9 +8,7 @@ namespace CCSolutionHRM.Models
 {
     public class EmployeeQualification
     {
-        public int ID { get; set; }
-        [Required]
-        public string Name { get; set; }
+        public int ID { get; set; }        
         [Required]
         public int EmployeeId { get; set; }
         [Required]
